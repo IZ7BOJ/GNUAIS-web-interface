@@ -294,7 +294,7 @@ if (!$mysqli)
 		</script>
       <hr>
       <br>
-      <center><a href="https://github.com/iz7boj" target="_blank">GNU-AIS Web Interface by IZ7BOJ</a></center>
+      <center><a href="https://github.com/IZ7BOJ/GNUAIS-web-interface" target="_blank">GNU-AIS Web Interface by IZ7BOJ</a></center>
       <br>
    </body>
 </html>
