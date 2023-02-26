@@ -1,6 +1,6 @@
-!(./screenshots/GNUAIS-web-interface_screen1.JPG)
-!(./screenshots/GNUAIS-web-interface_screen2.JPG)
-!(./screenshots/GNUAIS-web-interface_screen3.JPG)
+![screen1](./screenshots/GNUAIS-web-interface_screen1.JPG)
+![screen2](./screenshots/GNUAIS-web-interface_screen2.JPG)
+![screen3](./screenshots/GNUAIS-web-interface_screen3.JPG)
 # GNUAIS-web-interface
 This script is a Simple Web interface for GNUAIS receiver which runs on Linux Machines or Raspberry and shows data of received AIS Stations on a table and on a Map.
 
