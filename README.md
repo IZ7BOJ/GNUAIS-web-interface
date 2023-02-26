@@ -6,7 +6,14 @@ This script is a Simple Web interface for GNUAIS receiver which runs on Linux Ma
 - Install MySQL Server. I used MariaDB: https://mariadb.org/ . Follow this guide: https://pimylifeup.com/raspberry-pi-mysql/
 - Create gnuais database using this script: https://github.com/rubund/gnuais/blob/master/create_table.sql ( mysql < create_table.sql )
 - Configure the MySQL parameters of /etc/gnuais.conf in order to access to the database created in the previous step
-- Install a web server (I used Lighttpd) and php 
+- Install a web server (I used Lighttpd):
+```
+sudo apt-get install lighttpd
+```
+- Install php:
+```
+sudo apt-get install php7.3-common php7.3-cgi php  (valid for raspbian today...always verify last version before installation!)
+```
 - Install Openlayers, the javascript library for displaying maps into web page. Follow this steps:
 ```
 go into the main folder of your web server
@@ -14,7 +21,13 @@ sudo apt-get update
 sudo apt-get install npm
 npm install ol
 ```
-- Enable cgi-php
+- Verify that a sub-folder named "modules" has been created into web server main folder
+- Enable cgi-php:
+```
+sudo lighty-enable-mod fastcgi
+sudo lighty-enable-mod fastcgi-php
+sudo service lighttpd force-reload
+```
 - Download the content of this github in the main folder of your web server (es: /var/www/html/ )
 - Edit config.php with your station coordinates (used for ships distance calculations) and database credentials
 - Enjoy
