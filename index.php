@@ -206,7 +206,7 @@ if (!$mysqli)
                <td align="center"><?php echo $row["longitude"] ?></td>
                <td align="center"><?php echo ($row["name"]!="") ? $row["name"] : 'n/a' ?></td>
                <td align="center"><?php echo ($row["destination"]!="") ? $row["destination"] : "n/a" ?></td>
-               <td align="center"><?php echo round($row["speed"],2) ?></td>
+               <td align="center"><?php echo round(floatval($row["speed"]),2) ?></td>
                <td align="center"><?php echo ($row["time"]!=null) ? date('H:i:s',$row["time"]) : "n/a" ?></td>
                <td align="center"><?php echo bearing_dist($stationlat,$stationlon,$row["latitude"],$row["longitude"])['km'] ?></td>
             </tr>
